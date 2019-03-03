@@ -1,3 +1,4 @@
 db.sqlite3
-db.mongodb
+db_mongodb
 venv/
+__pycache__/
