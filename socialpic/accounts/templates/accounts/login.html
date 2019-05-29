@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+  <h1>SocialPic</h1>
+</header>
+
+{% if error %}
+<section>
+  {{ error }}
+</section>
+{% endif %}
+<section>
+  <form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" value="" placeholder="Username">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" value="" placeholder="Password">
+
+    <input type="submit" name="submit" id="submit" value="Submit">
+  </form>
+</section>
+{% endblock %}
+
+
